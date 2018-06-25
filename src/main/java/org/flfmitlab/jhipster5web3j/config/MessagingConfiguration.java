@@ -3,6 +3,8 @@ package org.flfmitlab.jhipster5web3j.config;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.flfmitlab.jhipster5web3j.messaging.ConsumerChannel;
+import org.flfmitlab.jhipster5web3j.messaging.ProducerChannel;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +20,7 @@ import org.springframework.messaging.support.GenericMessage;
  * See http://docs.spring.io/spring-cloud-stream/docs/current/reference/htmlsingle/
  * for the official Spring Cloud Stream documentation.
  */
-@EnableBinding(value = { Source.class })
+@EnableBinding(value = {Source.class, ProducerChannel.class, ConsumerChannel.class})
 public class MessagingConfiguration {
 
     /**
