@@ -84,6 +84,16 @@ spring:
             subscribableChannel:
                 destination: greetings
 
+web3j:
+    client-address: http://localhost:8545
+    # Or, an IPC endpoing
+    #client-address: /ethipc/geth.ipc
+    #If you wish to make use of the personal module methods that are common to both Parity and Geth to manage accounts, enable the admin client:
+    #web3j.admin-client = true
+    #Some Ethereum operations take longer than the default HTTP timeout set by the OkHttp3 library used by web3j. To configure those timeouts set the web3j httpTimeoutSeconds property:
+    #This sets all three OkHttp3 timeouts: connect, read, and write., Valid values are any non-negative integer. A value of '0' means: no timeout.
+    #web3j.httpTimeoutSeconds = 600
+
 server:
     servlet:
         session:
@@ -138,3 +148,5 @@ jhipster:
 # ===================================================================
 
 # application:
+
+
