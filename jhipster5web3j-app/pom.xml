@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.flfmitlab.jhipster5web3j</groupId>
-    <artifactId>jhipster-5-web-3-j</artifactId>
+    <artifactId>jhipster5web3j-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Jhipster 5 Web 3 J</name>
+    <name>Jhipster5 Web3J App</name>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
