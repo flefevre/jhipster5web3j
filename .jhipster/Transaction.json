@@ -1,0 +1,29 @@
+{
+    "name": "Transaction",
+    "fields": [
+        {
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "block",
+            "otherEntityName": "block",
+            "otherEntityField": "address"
+        }
+    ],
+    "changelogDate": "20180626071650",
+    "entityTableName": "transaction",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

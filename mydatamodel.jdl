@@ -1,0 +1,24 @@
+//Initial API and implementation:
+//Francois Le Fevre
+
+entity Transaction{
+  address String required
+}
+entity Block {
+  address String required
+}
+
+relationship OneToMany {
+  Block{transactions(address)} to Transaction{block(address)}
+}
+
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+paginate * with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+//angularSuffix * with mySuffix

@@ -41,6 +41,9 @@ public class CacheConfiguration {
             cm.createCache(org.flfmitlab.jhipster5web3j.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(org.flfmitlab.jhipster5web3j.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(org.flfmitlab.jhipster5web3j.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(org.flfmitlab.jhipster5web3j.domain.Transaction.class.getName(), jcacheConfiguration);
+            cm.createCache(org.flfmitlab.jhipster5web3j.domain.Block.class.getName(), jcacheConfiguration);
+            cm.createCache(org.flfmitlab.jhipster5web3j.domain.Block.class.getName() + ".transactions", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

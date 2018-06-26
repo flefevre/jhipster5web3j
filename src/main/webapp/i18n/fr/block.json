@@ -1,0 +1,23 @@
+
+{
+    "jhipster5Web3JApp": {
+        "block" : {
+            "home": {
+                "title": "Blocks",
+                "createLabel": "Créer un nouveau Block",
+                "createOrEditLabel": "Créer ou éditer un Block"
+            },
+            "created": "Un nouveau Block a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Block avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Block avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Block {{ id }} ?"
+            },
+            "detail": {
+                "title": "Block"
+            },
+            "address": "Address",
+            "transactions": "Transactions"
+        }
+    }
+}
