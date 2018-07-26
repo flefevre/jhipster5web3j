@@ -28,11 +28,11 @@
 	</developers>
 
 	<inceptionYear>2018</inceptionYear>
-	
+
 	<properties>
 		<slf4jVersion>1.6.1</slf4jVersion>
 	</properties>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -160,6 +160,37 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<id>script-chmod</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<executable>chmod</executable>
+							<arguments>
+								<argument>+x</argument>
+								<argument>./src/main/resources/build.sh</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<phase>generate-sources</phase>
+						<configuration>
+							<executable>../build.sh</executable>
+							<workingDirectory>src/main/resources/isolidity/</workingDirectory>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.web3j</groupId>

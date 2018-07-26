@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.flfmitlab.jhipster5web3j</groupId>
-	<artifactId>jhipster5web3j-sim</artifactId>
+	<artifactId>jhipster5web3j-wat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Blockchain Ethereum Simulater</name>
+	<name>Blockchain Ethereum Watcher</name>
 
-	<description>A small application to call smartcontracts</description>
+	<description>PLEASE PROVIDE A DESCRIPTION</description>
 
 	<developers>
 		<developer>
@@ -78,6 +78,14 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>${slf4jVersion}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -108,43 +116,7 @@
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>1.10</version>
 				</plugin>
-				<plugin>
-					<groupId>org.web3j</groupId>
-					<artifactId>web3j-maven-plugin</artifactId>
-					<version>0.3.0</version>
-				</plugin>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>org.web3j</groupId>
-										<artifactId>
-											web3j-maven-plugin
-										</artifactId>
-										<versionRange>
-											[0.3.0,)
-										</versionRange>
-										<goals>
-											<goal>
-												generate-sources
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<execute></execute>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
+
 			</plugins>
 		</pluginManagement>
 
